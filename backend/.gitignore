@@ -21,7 +21,7 @@ pids
 coverage/
 
 # Prisma
-prisma/migrations/
+prisma/
 
 # IDE
 .vscode/

@@ -1,0 +1,25 @@
+//config
+@name = api/routes
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@baseUrl = http://{{host}}/{{name}}
+
+# Login
+### TOKEN
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzdXBlcmFkbWluIiwiaWRfcm9sIjoiMSIsImlhdCI6MTc0Njc5NDM5NSwiZXhwIjoxNzQ2ODA4Nzk1fQ.KG2yZeg5CLtZx8ss2DLOeLm7TDP3GRZiaZbl5olrDoo
+
+### GET todos mostrar todos los usuarios
+GET {{baseUrl}}/aaaa HTTP/1.1
+
+### POST crear un usuario nuevo
+POST {{baseUrl}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "admin@educa.com",
+  "password": "password123",
+  "name": "Admin",
+  "role": "ADMIN"
+}

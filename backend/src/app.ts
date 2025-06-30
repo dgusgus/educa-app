@@ -82,7 +82,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Rutas de la API
-app.use('/api', (req: Request, res: Response) => {
+/* app.use('/api', (req: Request, res: Response) => {
   res.status(200).json({
     message: '📚 API del Sistema Educativo',
     version: '1.0.0',
@@ -96,7 +96,13 @@ app.use('/api', (req: Request, res: Response) => {
     },
     status: 'En desarrollo'
   });
-});
+}); */
+
+// Importar rutas principales
+import apiRoutes from '@/routes';
+
+// Rutas de la API
+app.use('/api', apiRoutes);
 
 // ==========================================
 // MANEJO DE ERRORES
