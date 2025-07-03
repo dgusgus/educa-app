@@ -18,12 +18,13 @@
       "@/config/*": ["src/config/*"],
       "@/controllers/*": ["src/controllers/*"],
       "@/middleware/*": ["src/middleware/*"],
-      "@/models/*": ["src/models/*"],
+      "@/modules/*": ["src/modules/*"],
       "@/repositories/*": ["src/repositories/*"],
       "@/routes/*": ["src/routes/*"],
       "@/services/*": ["src/services/*"],
       "@/utils/*": ["src/utils/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

@@ -8,13 +8,10 @@ import teacherRoutes from './teachers.routes';
 import courseRoutes from './courses.routes';
 import gradeRoutes from './grades.routes'; */
 import userRoutes from './users.routes';
+import studentRoutes from './student.routes';
 
 // Crear router principal
 const router = Router();
-
-// ==========================================
-// RUTAS DE LA API
-// ==========================================
 
 // Ruta de bienvenida de la API
 router.get('/', (req, res) => {
@@ -90,9 +87,7 @@ router.get('/', (req, res) => {
   });
 });
 
-// ==========================================
 // REGISTRAR RUTAS ESPECÍFICAS
-// ==========================================
 
 // Autenticación
 router.use('/auth', authRoutes);
@@ -101,7 +96,7 @@ router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 
 // Gestión de estudiantes
-//router.use('/students', studentRoutes);
+router.use('/students', studentRoutes);
 
 // Gestión de profesores
 //router.use('/teachers', teacherRoutes);

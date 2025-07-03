@@ -32,7 +32,8 @@
     "express-validator": "^7.2.1",
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -43,9 +44,12 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.7",
+    "@types/swagger-ui-express": "^4.1.8",
     "module-alias": "^2.2.3",
     "nodemon": "^3.1.10",
     "prisma": "^6.10.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
@@ -56,7 +60,7 @@
     "@/config": "src/config",
     "@/controllers": "src/controllers",
     "@/middleware": "src/middleware",
-    "@/models": "src/models",
+    "@/modules": "src/modules",
     "@/repositories": "src/repositories",
     "@/routes": "src/routes",
     "@/services": "src/services",
