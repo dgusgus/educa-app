@@ -21,18 +21,9 @@ export interface StudentWithGrades extends Student {
   })[];
 }
 
-export interface CreateStudentDTO {
-  userId: number;
-  studentId: string;
-  grade: string;
-  section: string;
-}
+export interface CreateStudentDTO extends Omit<BaseStudent, 'id' | 'enrolledAt'> {}
 
-export interface UpdateStudentDTO {
-  studentId?: string;
-  grade?: string;
-  section?: string;
-}
+export interface UpdateStudentDTO extends Partial<Omit<BaseStudent, 'id' | 'userId'|'enrolledAt'>> {}
 
 export interface StudentFilter {
   grade?: string;
