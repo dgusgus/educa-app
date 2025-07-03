@@ -1,0 +1,38 @@
+//? config
+@name = api
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@baseUrl = http://{{host}}/{{name}}
+
+# Login
+POST {{baseUrl}}/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "admin@educa.com",
+  "password": "password123"
+}
+### TOKEN
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZWR1Y2EuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUxNTA4NjE0LCJleHAiOjE3NTE1MDk1MTR9.IXVT0nTHseNC6jeoOwGRtc5AmFG34mpKVWJ53624kno
+
+### GET todos mostrar todos los usuarios
+GET {{baseUrl}}/students HTTP/1.1
+Authorization: Bearer {{authToken}}
+
+### GETBYID todos mostrar todos los usuarios
+GET {{baseUrl}}/students/1 HTTP/1.1
+Authorization: Bearer {{authToken}}
+
+### POST crear un usuario nuevo
+POST {{baseUrl}}/students HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "userId": 2,
+  "studentId": "EST2023001",
+  "grade": "10mo",
+  "section": "A"
+}
